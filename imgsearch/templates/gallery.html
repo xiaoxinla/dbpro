@@ -1,0 +1,15 @@
+{% load staticfiles %}
+{% if raw %}
+    {% for raw_item in raw %}
+    {{ raw_item }} <br>
+    {% endfor %}
+{% else %}
+No Raws!
+{% endif %}
+{% if thumb %}
+    {% for thumbnail in thumb %}
+    <img src="{% static thumbnail %}">
+    {% endfor%}
+{% else %}
+No Thumbnails!
+{% endif %}
